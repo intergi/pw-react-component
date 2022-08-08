@@ -1,0 +1,17 @@
+{
+  "name": "@intergi/pw-react-component",
+  "version": "1.0.0",
+  "description": "Playwire React Component",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intergi/pw-react-component.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Playwire",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
