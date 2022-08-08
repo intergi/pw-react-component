@@ -1,0 +1,14 @@
+.component-app {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%; */
+}
+
+.component-app > div {
+  display: flex;
+}
+
+.component-app > div > div {
+  padding: 2px;
+}
