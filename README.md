@@ -1,2 +1,2 @@
 # pw-react-component
-Playwire's react component libarry
+Playwire's react component library
