@@ -2,16 +2,22 @@
   "name": "@intergi/pw-react-component",
   "version": "1.0.0",
   "description": "Playwire React Component",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/intergi/pw-react-component.git"
+    "url": "git+https://github.com/intergi/pw-react-component.git"
   },
   "license": "Apache-2.0",
   "author": "Playwire",
-  "devDependencies": {
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/intergi/pw-react-component/issues"
   },
-  "dependencies": {
-  }
+  "homepage": "https://github.com/intergi/pw-react-component#readme",
+  "main": "Ramp.js",
+  "keywords": [
+    "ramp",
+    "playwire",
+    "react"
+  ]
 }
