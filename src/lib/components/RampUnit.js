@@ -1,7 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-
-import "./Ramp.css";
 
 export default class Ramp extends React.Component {
 
