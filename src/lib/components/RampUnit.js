@@ -5,10 +5,6 @@ import "./Ramp.css";
 
 export default class Ramp extends React.Component {
 
-  static propTypes = {
-    value: PropTypes.string,
-  };
-
   render() {
 
     const props = this.props;

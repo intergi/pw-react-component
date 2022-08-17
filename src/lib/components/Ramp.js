@@ -23,16 +23,12 @@ export default class Ramp extends React.Component {
 
     }
 
-  static propTypes = {
-    value: PropTypes.string,
-  };
-
-  render() {
-    return (
-        <div className="ramp" style={{display: "flex"}}>
-            <span>Powered by</span>
-            <img src={pwLogo} alt="playwire-logo" style={{marginLeft: "10px"}}></img>
-        </div>
-    );
-  }
+    render() {
+      return (
+          <div className="ramp" style={{display: "flex"}}>
+              <span>Powered by</span>
+              <img src={pwLogo} alt="playwire-logo" style={{marginLeft: "10px"}}></img>
+          </div>
+      );
+    }
 }
