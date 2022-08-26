@@ -5,6 +5,17 @@ window.ramp.que = window.ramp.que || [];
 window.ramp.passiveMode = true;
 window._pwRampComponentLoaded = false;
 
+const oopUnits = [
+    'trendi_slideshow',
+    'trendi_video',
+    'site_skin',
+    'flex_leaderboard',
+    'top_rail',
+    'right_rail',
+    'bottom_rail',
+    'left_rail'
+];
+
 export default class Ramp extends React.Component {
     constructor(props) {
 
@@ -30,20 +41,20 @@ export default class Ramp extends React.Component {
 
         window.ramp.que.push(() => {
             window.ramp.addUnits([
-                {type: 'trendi_slideshow'},
-                {type: 'trendi_video'},
+                // {type: 'trendi_slideshow'},
+                // {type: 'trendi_video'},
                 {type: 'site_skin'},
-                {type: 'flex_leaderboard'}, 
+                {type: 'flex_leaderboard'},
                 {type: 'top_rail'},
-                {type: 'right_rail'}, 
+                {type: 'right_rail'},
                 {type: 'bottom_rail'},
                 {type: 'left_rail'},
                 // {type: 'behind_page'},
                 // {type: 'in_image'},
                 // {type: 'above_page'},
                 // {type: 'in_content'},
-                // {type: 'inimg'}, 
-                // {type: 'skin'} 
+                // {type: 'inimg'},
+                // {type: 'skin'}
             ])
             .then(() => {
                 window.ramp.displayUnits();
