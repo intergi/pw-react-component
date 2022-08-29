@@ -3,7 +3,7 @@ import React from 'react';
 window.ramp = window.ramp || {};
 window.ramp.que = window.ramp.que || [];
 window.ramp.passiveMode = true;
-window._pwRampComponentLoaded = false;
+window._pwRampComponentLoaded = window._pwRampComponentLoaded || false;
 
 const oopUnits = [
     'trendi_slideshow',

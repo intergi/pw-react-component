@@ -12,7 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 window.ramp = window.ramp || {};
 window.ramp.que = window.ramp.que || [];
 window.ramp.passiveMode = true;
-window._pwRampComponentLoaded = false;
+window._pwRampComponentLoaded = window._pwRampComponentLoaded || false;
 const oopUnits = ['trendi_slideshow', 'trendi_video', 'site_skin', 'flex_leaderboard', 'top_rail', 'right_rail', 'bottom_rail', 'left_rail'];
 
 class Ramp extends _react.default.Component {
