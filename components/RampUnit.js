@@ -59,41 +59,7 @@ const cleanUp = parentId => {
   if (slotToRemove) {
     window.ramp.destroyUnits(slotToRemove);
   }
-}; // export default function Ramp (props) {
-//     const [rendered, setRendered] = useState(false);
-//     const [unitToAdd] = useState(getInitialUnit(props));
-//     const elementRef = useRef(null);
-//     const renderAd = () => {
-//         if (rendered) {
-//             return;
-//         }
-//         setRendered(true);
-//         window.ramp.que.push(() => {
-//             window.ramp.addUnits([
-//                     unitToAdd
-//                 ]).then( () => {
-//                     window.ramp.displayUnits();
-//                 }).catch( (e) =>{
-//                     console.log(e);
-//                 });
-//         });
-//     };
-//     useEffect(() => {
-//         renderAd();
-//         return () => {
-//             cleanUp(unitToAdd.selectorId);
-//         }
-//     }, []);
-//     return (
-//         <div
-//             ref={elementRef}
-//             id={unitToAdd.selectorId}
-//             className={props.cssClass}
-//         >
-//         </div>
-//     );
-// };
-
+};
 
 class Ramp extends _react.default.Component {
   constructor(props) {
