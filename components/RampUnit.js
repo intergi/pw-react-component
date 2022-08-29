@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Ramp;
+exports.default = void 0;
 
 require("core-js/modules/es.array.includes.js");
 
@@ -57,76 +57,76 @@ const cleanUp = parentId => {
   });
 
   if (slotToRemove) {
-    window.ramp.que.push(() => {
-      window.ramp.destroyUnits(slotToRemove);
-    });
+    window.ramp.destroyUnits(slotToRemove);
   }
-};
-
-function Ramp(props) {
-  const [rendered, setRendered] = (0, _react.useState)(false);
-  const [unitToAdd] = (0, _react.useState)(getInitialUnit(props));
-  const elementRef = (0, _react.useRef)(null);
-
-  const renderAd = () => {
-    if (rendered) {
-      return;
-    }
-
-    setRendered(true);
-    window.ramp.que.push(() => {
-      window.ramp.addUnits([unitToAdd]).then(() => {
-        window.ramp.displayUnits();
-      }).catch(e => {
-        console.log(e);
-      });
-    });
-  };
-
-  (0, _react.useEffect)(() => {
-    renderAd();
-    return () => {
-      cleanUp(unitToAdd.selectorId);
-    };
-  }, []);
-  return /*#__PURE__*/_react.default.createElement("div", {
-    ref: elementRef,
-    id: unitToAdd.selectorId,
-    className: props.cssClass
-  });
-}
-
-; // class Ramp extends React.Component {
-//     constructor (props) {
-//         super (props);
-//     }
-//     shouldComponentUpdate (nextProps) {
-//         return nextProps.selectorId !== this.props.selectorId;
-//     }
-//     render() {
-//
-//         const props = this.props;
-//
-//         if (document.getElementById(props.selectorId))
-//             return null;
-//         window.ramp = window.ramp || {};
-//         window.ramp.que = window.ramp.que || [];
-//
+}; // export default function Ramp (props) {
+//     const [rendered, setRendered] = useState(false);
+//     const [unitToAdd] = useState(getInitialUnit(props));
+//     const elementRef = useRef(null);
+//     const renderAd = () => {
+//         if (rendered) {
+//             return;
+//         }
+//         setRendered(true);
 //         window.ramp.que.push(() => {
 //             window.ramp.addUnits([
-//                 {
-//                     selectorId: props.selectorId,
-//                     type: props.type
-//                 }
+//                     unitToAdd
 //                 ]).then( () => {
 //                     window.ramp.displayUnits();
 //                 }).catch( (e) =>{
 //                     console.log(e);
 //                 });
 //         });
-//
-//         return (
-//             <div data-pw-desk={props.type} id={props.selectorId} className={props.cssClass}></div>
-//         );
-//     }
-// }
+//     };
+//     useEffect(() => {
+//         renderAd();
+//         return () => {
+//             cleanUp(unitToAdd.selectorId);
+//         }
+//     }, []);
+//     return (
+//         <div
+//             ref={elementRef}
+//             id={unitToAdd.selectorId}
+//             className={props.cssClass}
+//         >
+//         </div>
+//     );
+// };
+
+
+class Ramp extends _react.default.Component {
+  constructor(props) {
+    super(props);
+    this.rendered = false;
+    this.unitToAdd = getInitialUnit(props);
+  }
+
+  componentDidMount() {
+    if (this.rendered) return;
+    this.rendered = true;
+    window.ramp.que.push(() => {
+      window.ramp.addUnits([this.unitToAdd]).then(() => {
+        window.ramp.displayUnits();
+      }).catch(e => {
+        console.warn(e);
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    window.ramp.que.push(() => {
+      cleanUp(this.unitToAdd.selectorId);
+    });
+  }
+
+  render() {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      id: this.unitToAdd.selectorId,
+      className: this.props.cssClass
+    });
+  }
+
+}
+
+exports.default = Ramp;

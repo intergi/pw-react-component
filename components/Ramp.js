@@ -30,13 +30,17 @@ class Ramp extends _react.default.Component {
   init(publisherId, id) {
     if (window._pwRampComponentLoaded) return;
     window._pwRampComponentLoaded = true;
-    const configScript = document.createElement("script");
-    configScript.src = "https://cdn.intergient.com/".concat(publisherId, "/").concat(id, "/ramp.js");
+    window.ramp.config = "https://config.playwire.com/".concat(publisherId, "/v2/websites/").concat(id, "/banner.json");
+    const configScript = document.createElement("script"); // configScript.src = `https://cdn.intergient.com/${publisherId}/${id}/ramp.js`;
+
+    configScript.src = 'https://cdn.intergient.com/ramp_core.js';
     document.head.appendChild(configScript);
     window.ramp.que.push(() => {
-      window.ramp.addUnits([// {type: 'trendi_slideshow'},
-      // {type: 'trendi_video'},
-      {
+      window.ramp.addUnits([{
+        type: 'trendi_slideshow'
+      }, {
+        type: 'trendi_video'
+      }, {
         type: 'site_skin'
       }, {
         type: 'flex_leaderboard'

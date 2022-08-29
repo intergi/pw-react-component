@@ -35,14 +35,16 @@ export default class Ramp extends React.Component {
             return;
 
         window._pwRampComponentLoaded = true;
+        window.ramp.config = `https://config.playwire.com/${publisherId}/v2/websites/${id}/banner.json`;
         const configScript = document.createElement("script");
-        configScript.src = `https://cdn.intergient.com/${publisherId}/${id}/ramp.js`;
+        // configScript.src = `https://cdn.intergient.com/${publisherId}/${id}/ramp.js`;
+        configScript.src = 'https://cdn.intergient.com/ramp_core.js';
         document.head.appendChild(configScript);
 
         window.ramp.que.push(() => {
             window.ramp.addUnits([
-                // {type: 'trendi_slideshow'},
-                // {type: 'trendi_video'},
+                {type: 'trendi_slideshow'},
+                {type: 'trendi_video'},
                 {type: 'site_skin'},
                 {type: 'flex_leaderboard'},
                 {type: 'top_rail'},
