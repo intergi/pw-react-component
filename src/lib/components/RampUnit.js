@@ -75,10 +75,10 @@ export default class Ramp extends React.Component {
         window.ramp.que.push(() => {
             window.ramp.addUnits([
                     this.unitToAdd
-                ]).then( () => {
-                    window.ramp.displayUnits();
-                }).catch( (e) =>{
+                ]).catch( (e) =>{
                     console.warn(e);
+                }).finally(() => {
+                    window.ramp.displayUnits();
                 });
         });
     }

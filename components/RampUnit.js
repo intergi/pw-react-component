@@ -9,6 +9,10 @@ require("core-js/modules/es.array.includes.js");
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
+require("core-js/modules/es.promise.js");
+
+require("core-js/modules/es.promise.finally.js");
+
 var _react = _interopRequireWildcard(require("react"));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -72,10 +76,10 @@ class Ramp extends _react.default.Component {
     if (this.rendered) return;
     this.rendered = true;
     window.ramp.que.push(() => {
-      window.ramp.addUnits([this.unitToAdd]).then(() => {
-        window.ramp.displayUnits();
-      }).catch(e => {
+      window.ramp.addUnits([this.unitToAdd]).catch(e => {
         console.warn(e);
+      }).finally(() => {
+        window.ramp.displayUnits();
       });
     });
   }
