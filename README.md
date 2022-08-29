@@ -18,7 +18,6 @@ Playwire's react component library
 />
 
 <RampUnit
-  selectorId="pwLeaderboardAtf"
   type="leaderboard_atf"
   cssClass="leaderboard"
 />
