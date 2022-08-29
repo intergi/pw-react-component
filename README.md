@@ -3,7 +3,7 @@ Playwire's react component library
 
 
 ### Install it as a npm dependency
-```npm i --save-dev @playwire/pw-react-component```
+```npm i --save @playwire/pw-react-component```
 
 
 ### How to use it
@@ -18,7 +18,6 @@ Playwire's react component library
 />
 
 <RampUnit
-  selectorId="pwLeaderboardAtf"
   type="leaderboard_atf"
   cssClass="leaderboard"
 />
