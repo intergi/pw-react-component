@@ -61,7 +61,7 @@ const cleanUp = (parentId) => {
     }
 };
 
-export default class Ramp extends React.Component {
+export default class RampUnit extends React.Component {
     constructor (props) {
         super (props);
         this.rendered = false;

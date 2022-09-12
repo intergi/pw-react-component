@@ -65,7 +65,7 @@ const cleanUp = parentId => {
   }
 };
 
-class Ramp extends _react.default.Component {
+class RampUnit extends _react.default.Component {
   constructor(props) {
     super(props);
     this.rendered = false;
@@ -99,4 +99,4 @@ class Ramp extends _react.default.Component {
 
 }
 
-exports.default = Ramp;
+exports.default = RampUnit;
