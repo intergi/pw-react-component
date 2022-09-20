@@ -42,7 +42,7 @@ const getInitialUnit = (props) => {
 const cleanUp = (parentId) => {
 
     // possible that component was removed before first ad was created
-    if (!window.ramp.setttings || !window.ramp.settings.slots)
+    if (!window.ramp.settings || !window.ramp.settings.slots)
         return;
 
     let slotToRemove = null;
