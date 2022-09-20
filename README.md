@@ -24,3 +24,13 @@ Playwire's react component library
   cssClass="leaderboard"
 />
 ```
+
+- publisherId [required] -The publisher’s unique identifier.
+
+- id [required] - The website’s unique identifier.
+
+- forcePath [optional] - Override the URL path. When this prop changes, it will reload OOP/tagless units based on the config rules for the new path.
+
+- type [required] - The tagged ad units that the AM sets up. These units require a placeholder, for example, leaderboard, medium rectangle, and skyscraper.
+
+- cssClass [optional] - Places css class on div element. Won’t load any styles.
