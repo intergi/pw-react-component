@@ -50,7 +50,7 @@ const getInitialUnit = props => {
 
 const cleanUp = parentId => {
   // possible that component was removed before first ad was created
-  if (!window.ramp.setttings || !window.ramp.settings.slots) return;
+  if (!window.ramp.settings || !window.ramp.settings.slots) return;
   let slotToRemove = null;
   Object.entries(window.ramp.settings.slots).forEach(_ref => {
     let [slotName, slot] = _ref;
