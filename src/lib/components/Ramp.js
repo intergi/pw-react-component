@@ -94,10 +94,7 @@ export default class Ramp extends React.Component {
                 // {type: 'skin'}
             ])
             .finally(() => {
-                return window.ramp.displayUnits();
-            })
-            .finally(() => {
-                console.log('done')
+                window.ramp.displayUnits();
             });
         });
     }
