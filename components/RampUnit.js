@@ -50,7 +50,7 @@ const getInitialUnit = props => {
 
 const cleanUp = parentId => {
   // possible that component was removed before first ad was created
-  if (!window.ramp.setttings || !window.ramp.settings.slots) return;
+  if (!window.ramp.settings || !window.ramp.settings.slots) return;
   let slotToRemove = null;
   Object.entries(window.ramp.settings.slots).forEach(_ref => {
     let [slotName, slot] = _ref;
@@ -65,7 +65,7 @@ const cleanUp = parentId => {
   }
 };
 
-class Ramp extends _react.default.Component {
+class RampUnit extends _react.default.Component {
   constructor(props) {
     super(props);
     this.rendered = false;
@@ -99,4 +99,4 @@ class Ramp extends _react.default.Component {
 
 }
 
-exports.default = Ramp;
+exports.default = RampUnit;
