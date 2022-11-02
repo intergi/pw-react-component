@@ -1,6 +1,5 @@
 import React from "react";
-import Ramp from "./Ramp/Ramp";
-import RampUnit from "./Ramp/RampUnit";
+import { Ramp, RampUnit }  from "@playwire/pw-react-component";
 
 export default class App extends React.Component {
   state = {

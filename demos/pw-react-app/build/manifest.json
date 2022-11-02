@@ -1,6 +1,6 @@
 {
-  "short_name": "Calculator",
-  "name": "React Calculator Example App",
+  "short_name": "Playwire React App",
+  "name": "Playwire React Example App",
   "icons": [
     {
       "src": "favicon.ico",

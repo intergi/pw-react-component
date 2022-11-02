@@ -1,8 +1,7 @@
 {
-  "name": "calculator",
+  "name": "pw-react-app",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "http://ahfarmer.github.io/calculator",
   "devDependencies": {
     "chai": "^4.2.0",
     "gh-pages": "^2.0.1",
@@ -10,13 +9,14 @@
     "react-scripts": "^3.0.1"
   },
   "dependencies": {
+    "@playwire/pw-react-component": "^1.0.6",
     "big.js": "^5.2.2",
     "github-fork-ribbon-css": "^0.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
