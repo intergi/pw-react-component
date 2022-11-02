@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import pwLogo from './playwire-logo.webp';
+// import pwLogo from './playwire-logo.webp';
 
-import "./Ramp.css";
+// import "./Ramp.css";
 
 export default class Ramp extends React.Component {
 
@@ -30,8 +30,8 @@ export default class Ramp extends React.Component {
   render() {
     return (
         <div className="ramp" style={{display: "flex"}}>
-            <span>Powered by</span>
-            <img src={pwLogo} alt="playwire-logo" style={{marginLeft: "10px"}}></img>
+            {/* <span>Powered by</span>
+            <img src={pwLogo} alt="playwire-logo" style={{marginLeft: "10px"}}></img> */}
         </div>
     );
   }

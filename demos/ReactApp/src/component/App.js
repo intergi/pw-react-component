@@ -11,9 +11,14 @@ export default class App extends React.Component {
       <div>
 
         {/* Ramp.js Component */}
-        <Ramp
+        {/* <Ramp
           publisherId="1016948"
           id="63673"
+        /> */}
+
+        <Ramp
+          publisherId="343"
+          id="926"
         />
 
         <RampUnit
