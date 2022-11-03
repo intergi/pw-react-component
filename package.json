@@ -26,8 +26,5 @@
     "ramp",
     "playwire",
     "react"
-  ],
-  "dependencies": {
-    "@playwire/pw-react-component": "^1.0.6"
-  }
+  ]
 }

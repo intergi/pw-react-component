@@ -9,7 +9,7 @@
     "react-scripts": "^3.0.1"
   },
   "dependencies": {
-    "@playwire/pw-react-component": "^1.0.6",
+    "@playwire/pw-react-component": "^1.0.7",
     "big.js": "^5.2.2",
     "github-fork-ribbon-css": "^0.2.1",
     "react": "^16.8.6",
