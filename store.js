@@ -13,11 +13,11 @@ class Store {
 
     _defineProperty(this, "getUnitId", unit => {
       if (typeof this.units[unit] === 'undefined') {
-        this.units[unit] = 2;
-        return unit;
+        this.units[unit] = 1;
+        return "pw-".concat(unit);
       } else {
         ++this.units[unit];
-        return "".concat(unit).concat(this.units[unit]);
+        return "pw-".concat(unit).concat(this.units[unit]);
       }
     });
   }
