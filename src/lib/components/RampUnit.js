@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
+import store from './../store';
 
 window.ramp = window.ramp || {};
 window.ramp.que = window.ramp.que || [];
@@ -15,15 +16,7 @@ const inPageUnits = [
 // find a new unique element ID to place this ad
 const getUniqueId = (type) => {
 
-    let base = `pw-${type}`;
-    let idx = 1;
-    while (document.getElementById(`${base}${idx}`)) {
-
-        idx++;
-
-    }
-
-    return `${base}${idx}`;
+    return store.getUnitId(type);
 
 };
 
@@ -42,7 +35,7 @@ const getInitialUnit = (props) => {
 const cleanUp = (parentId) => {
 
     // possible that component was removed before first ad was created
-    if (!window.ramp.setttings || !window.ramp.settings.slots)
+    if (!window.ramp.settings || !window.ramp.settings.slots)
         return;
 
     let slotToRemove = null;
@@ -61,7 +54,7 @@ const cleanUp = (parentId) => {
     }
 };
 
-export default class Ramp extends React.Component {
+export default class RampUnit extends React.Component {
     constructor (props) {
         super (props);
         this.rendered = false;
