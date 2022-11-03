@@ -34,6 +34,14 @@ export default class App extends React.Component {
             cssClass="med_rect"
           />
 
+          <div></div>
+          <RampUnit
+              type="med_rect_btf"
+          />
+          <RampUnit
+              type="med_rect_btf"
+          />
+
         </div>
 
       </div>
