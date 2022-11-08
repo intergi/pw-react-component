@@ -10,12 +10,9 @@ export default class App extends React.Component {
   }
 
   handleGo = () => {
-    if (this.nextPublisherId)
-      localStorage.setItem('publisher_id', this.nextPublisherId);
-    if (this.nextWebsiteId)
-      localStorage.setItem('website_id', this.nextWebsiteId);
-    if (this.nextWebsiteId)
-      localStorage.setItem('force_path', this.forcePath);
+    localStorage.setItem('publisher_id', this.nextPublisherId || '343');
+    localStorage.setItem('website_id', this.nextWebsiteId || '926');
+    localStorage.setItem('force_path', this.forcePath);
     window.location.reload();
   }
 
