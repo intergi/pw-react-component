@@ -16,6 +16,13 @@ export default class App extends React.Component {
     window.location.reload();
   }
 
+  handleReset = () => {
+    localStorage.removeItem('publisher_id');
+    localStorage.removeItem('website_id');
+    localStorage.removeItem('force_path');
+    window.location.reload();
+  }
+
   render() {
     return (
       <div>
@@ -141,6 +148,7 @@ export default class App extends React.Component {
             <input onChange={(e) => {this.forcePath = e.target.value}}/>
           </p>
           <button type="button" onClick={this.handleGo}>Go!</button>
+          <button type="button" onClick={this.handleReset}>Reset</button>
         </div>
       </div>
     );
