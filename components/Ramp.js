@@ -86,15 +86,20 @@ class Ramp extends _react.default.Component {
       }, {
         type: 'top_rail'
       }, {
-        type: 'right_rail'
-      }, {
         type: 'bottom_rail'
       }, {
+        type: 'right_rail'
+      }, {
         type: 'left_rail'
+      }, {
+        type: 'sidebar'
+      }, {
+        type: 'sticky_sidebar'
+      }, {
+        type: 'in_content'
       } // {type: 'behind_page'},
       // {type: 'in_image'},
       // {type: 'above_page'},
-      // {type: 'in_content'},
       // {type: 'inimg'},
       // {type: 'skin'}
       ]).finally(() => {
