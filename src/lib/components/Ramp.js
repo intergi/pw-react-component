@@ -83,13 +83,15 @@ export default class Ramp extends React.Component {
                 {type: 'site_skin'},
                 {type: 'flex_leaderboard'},
                 {type: 'top_rail'},
-                {type: 'right_rail'},
                 {type: 'bottom_rail'},
+                {type: 'right_rail'},
                 {type: 'left_rail'},
+                {type: 'sidebar'},
+                {type: 'sticky_sidebar'},
+                {type: 'in_content'}
                 // {type: 'behind_page'},
                 // {type: 'in_image'},
                 // {type: 'above_page'},
-                // {type: 'in_content'},
                 // {type: 'inimg'},
                 // {type: 'skin'}
             ])

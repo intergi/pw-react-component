@@ -1068,9 +1068,8 @@
   "resolved" "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz"
   "version" "1.1.3"
 
-"@playwire/pw-react-component@^1.0.7":
-  "integrity" "sha512-lv8ftztSjlLt7lAEF4/z9kMoT2oCISLQxsgBFeTEmg4xGyaH2PvgryOyRZLoKhJtcZai/3jts7IaipPOACMgbA=="
-  "resolved" "https://registry.npmjs.org/@playwire/pw-react-component/-/pw-react-component-1.0.7.tgz"
+"@playwire/pw-react-component@file:../..":
+  "resolved" "file:../.."
   "version" "1.0.7"
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
