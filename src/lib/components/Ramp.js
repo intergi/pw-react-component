@@ -13,7 +13,8 @@ const oopUnits = [
     'top_rail',
     'right_rail',
     'bottom_rail',
-    'left_rail'
+    'left_rail',
+    'corner_ad_video'
 ];
 
 // destroy the units when componenent unmounts
@@ -88,7 +89,8 @@ export default class Ramp extends React.Component {
                 {type: 'left_rail'},
                 {type: 'sidebar'},
                 {type: 'sticky_sidebar'},
-                {type: 'in_content'}
+                {type: 'in_content'},
+                {type: 'corner_ad_video'}
                 // {type: 'behind_page'},
                 // {type: 'in_image'},
                 // {type: 'above_page'},
