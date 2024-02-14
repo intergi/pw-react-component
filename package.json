@@ -1,6 +1,6 @@
 {
   "name": "@playwire/pw-react-component",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Playwire React Component",
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir ./ --copy-files"
